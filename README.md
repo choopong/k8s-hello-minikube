@@ -5,11 +5,13 @@ Prerequisites:
 - Homebrew installation - https://brew.sh/
 - Docker for Mac - https://www.docker.com/docker-mac
 
-Commands:
+Install:
 - brew cask install minikube
 - curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-hyperkit && chmod +x docker-machine-driver-hyperkit && sudo mv docker-machine-driver-hyperkit /usr/local/bin/ && sudo chown root:wheel /usr/local/bin/docker-machine-driver-hyperkit && sudo chmod u+s /usr/local/bin/docker-machine-driver-hyperkit
-- minikube start --vm-driver=hyperkit
 - brew install kubernetes-cli
+
+Run:
+- minikube start --vm-driver=hyperkit
 - kubectl config use-context minikube
 - eval $(minikube docker-env)
 - docker build -t hello-node:v1 .
